@@ -76,7 +76,15 @@ const Quiz = ({ quizData, autoSubmitted, setAutoSubmitted, name, id }) => {
   };
 
  const handleQuizSubmit = ( ) => {
-    if (answers.length >= 5) {
+   let answerdQuestions = 0;
+    answers.forEach(answer => {
+      if(answer){
+        //differentiate between the answers and the state
+        answerdQuestions++;
+        // console.log("answered questions:", answerdQuestions) 
+      }else{}
+    });
+    if (answerdQuestions >= 1) {
       // Check if at least 5 questions have been answered ***
       let calculatedScore = 0;
       
@@ -126,25 +134,25 @@ const Quiz = ({ quizData, autoSubmitted, setAutoSubmitted, name, id }) => {
       }});
 
     console.log("auto complete", autoSubmitted)
-
-    //triggered if autocompleted
+    //triggered if time is autocompleted
     if (autoSubmitted) {
+      console.log("completed:", autoSubmitted)
       let calculatedScore = 0;
       answers.forEach((answer, index) => {
-        if (answer === quizData.questions[index].answer) {
-          calculatedScore++;
-        }
-      });
+          if (answer === quizData.questions[index].answer) {
+            calculatedScore++;
+          }
+        });
       setScore(calculatedScore);
-      console.log("score:", calculatedScore);
-    
+      saveDataEntry(name, id, calculatedScore);
       setTimeout(() => {
-        // Code to execute after the state has been updated
-        window.location.href = "congrat";
-      }, 0);
+          // redirect to congrats page
+          window.location.href = "congrat";
+        }, 0);
       clearAllCookies();
-    }
-    
+      setAutoSubmitted(false);      
+      //end of autocomplete
+    } 
   }
 
   // console.log('colors:', colors);
@@ -174,9 +182,9 @@ const Quiz = ({ quizData, autoSubmitted, setAutoSubmitted, name, id }) => {
       {showScore ? (
         <div>
           <h2>
-            You scored {score} out of {quizData.questions.length}
+            {/* You scored {score} out of {quizData.questions.length} */}
           </h2>
-          <button onClick={handleQuizReset}>Try Again</button>
+          {/* <button onClick={handleQuizReset}>Try Again</button> */}
         </div>
       ) : (
         <div className={styles.examQuestion}>

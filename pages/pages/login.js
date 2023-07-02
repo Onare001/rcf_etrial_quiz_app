@@ -88,12 +88,12 @@ const Candx_login = () => {
 							onChange={(e) => setName(e.target.value)}
 							className={styles.input}/>
 							<br/>
-							<label>One Time Password</label>
+							<label>Course Code</label>
 							<input 
 							type="text" 
 							name="id" 
 							id="id" 
-							placeholder="ID given to you e.g. R778" 
+							placeholder="Course Code" 
 							value={id}
           					onChange={(e) => setId(e.target.value)}
 							className={styles.input}/>

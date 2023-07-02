@@ -30,7 +30,7 @@ const SelectCourse = () => {
 			</div>
 			<div className={styles.right}>
 				<text className={styles.course_name}>CHM 111<br/></text>
-				50 Questions in 60 Minutes<br/>
+				20 Questions in 15 Minutes<br/>
 				<button className={styles.StartQuiz_btn} onClick={() => window.location.href = "quizchm111"}>Start Quiz</button>
 			</div>
 		</div>
@@ -40,7 +40,7 @@ const SelectCourse = () => {
 			</div>
 			<div className={styles.right}>
 				<text className={styles.course_name}>STA 117<br/></text>
-				50 Questions in 60 Minutes<br/>
+				20 Questions in 15 Minutes<br/>
 				<button className={styles.StartQuiz_btn} onClick={() => window.location.href = "quizsta117"}>Start Quiz</button>
 			</div>
 		</div>
@@ -52,7 +52,7 @@ const SelectCourse = () => {
 			</div>
 			<div className={styles.right}>
 				<text className={styles.course_name}>MAT 111<br/></text>
-				50 Questions in 60 Minutes<br/>
+				20 Questions in 20 Minutes<br/>
 				<button className={styles.StartQuiz_btn} onClick={() => window.location.href = "quizmat111"}>Start Quiz</button>
 			</div>
 		</div>
@@ -62,7 +62,7 @@ const SelectCourse = () => {
 			</div>
 			<div className={styles.right}>
 				<text className={styles.course_name}>MAT 112<br/></text>
-				50 Questions in 60 Minutes<br/>
+				20 Questions in 20 Minutes<br/>
 				<button className={styles.StartQuiz_btn} onClick={() => window.location.href = "quizmat112"}>Start Quiz</button>
 			</div>
 		</div>
@@ -74,7 +74,7 @@ const SelectCourse = () => {
 			</div>
 			<div className={styles.right}>
 				<text className={styles.course_name}>PHY 113<br/></text>
-				50 Questions in 60 Minutes<br/>
+				20 Questions in 20 Minutes<br/>
 				<button className={styles.StartQuiz_btn} onClick={() => window.location.href = "quizphy113"}>Start Quiz</button>
 			</div>
 		</div>
@@ -82,11 +82,11 @@ const SelectCourse = () => {
 			<div className={styles.left}>
 				<img className={styles.course_icon} src="rcf_logo_172_X_155.png" alt="Logo" />
 			</div>
-			<div className={styles.right}>
+			{/* <div className={styles.right}>
 				<text className={styles.course_name}>TEST<br/></text>
-				50 Questions in 60 Minutes<br/>
+				20 Questions in 15 Minutes<br/>
 				<button className={styles.StartQuiz_btn} onClick={() => window.location.href = "quizmattest"}>Start Quiz</button>
-			</div>
+			</div> */}
 		</div>
       </div>
     </div>

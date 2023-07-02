@@ -56,7 +56,7 @@ const Results = () => {
           <div key={entry._id}>
             <p>Username: {entry.username}</p>
             <p>ID: {entry.id}</p>
-            <p>Integer Value: {entry.integerValue}</p>
+            <p>Score: {entry.integerValue}</p>
           </div>
         </div>
       ))}
